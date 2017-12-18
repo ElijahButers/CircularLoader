@@ -280,7 +280,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DG9E3T36HM;
-				INFOPLIST_FILE = CirculaeLoader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CircularLoader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ElijahButers.CirculaeLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,7 +296,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DG9E3T36HM;
-				INFOPLIST_FILE = CirculaeLoader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CircularLoader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ElijahButers.CirculaeLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
