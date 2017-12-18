@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.lineWidth = 18
         view.layer.addSublayer(shapeLayer)
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+    }
+    
+    @objc private func handleTap() {
+        print("Attempting to animate stroke")
     }
 
     override func didReceiveMemoryWarning() {
