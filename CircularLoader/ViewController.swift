@@ -20,9 +20,16 @@ class ViewController: UIViewController {
         let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: CGFloat(-CFloat.pi / 2), endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 18
+        shapeLayer.lineWidth = 10
         shapeLayer.strokeEnd = 0
         view.layer.addSublayer(shapeLayer)
+        
+        let trackLayer = CAShapeLayer()
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.clear.cgColor
+        trackLayer.lineWidth = 10
+        trackLayer.strokeEnd = 0
+        view.layer.addSublayer(trackLayer)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
