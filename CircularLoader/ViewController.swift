@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let shapeLayer = CAShapeLayer()
+    let urlString = "https://www.youtube.com/watch?v=lYVazkkjOb8&t=351s"
 
     override func viewDidLoad() {
         super.viewDidLoad()
