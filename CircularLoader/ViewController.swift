@@ -38,8 +38,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
-    @objc private func handleTap() {
-        print("Attempting to animate stroke")
+    fileprivate func animateCircle() {
         
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 1
@@ -47,7 +46,12 @@ class ViewController: UIViewController {
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
+    }
+    
+    @objc private func handleTap() {
+        print("Attempting to animate stroke")
         
+        animateCircle()
         beginDownloadingFile()
     }
     
