@@ -47,6 +47,8 @@ class ViewController: UIViewController {
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
+        
+        beginDownloadingFile()
     }
     
     private func beginDownloadingFile() {
