@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
     }
+    
+    private func beginDownloadingFile() {
+        print("Attempting to dowload file")
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
