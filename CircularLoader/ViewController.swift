@@ -58,6 +58,14 @@ class ViewController: UIViewController {
     
     private func beginDownloadingFile() {
         print("Attempting to dowload file")
+        
+        let configuration = URLSessionConfiguration.default
+        let operationQueue = OperationQueue()
+        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
+        
+        guard let url = URL(string: urlSession) else { return }
+        let downloadTask = urlSession.downloadTask(with: url)
+        downloadTask.resume()
     }
 
     override func didReceiveMemoryWarning() {
