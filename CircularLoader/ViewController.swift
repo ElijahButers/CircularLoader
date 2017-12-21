@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, URLSessionDownloadDelegate {
     
     let shapeLayer = CAShapeLayer()
     let urlString = "https://www.youtube.com/watch?v=lYVazkkjOb8&t=351s"
