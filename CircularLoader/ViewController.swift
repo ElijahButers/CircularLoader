@@ -63,9 +63,19 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         let operationQueue = OperationQueue()
         let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
         
-        guard let url = URL(string: urlSession) else { return }
+        guard let url = URL(string: urlString) else { return }
         let downloadTask = urlSession.downloadTask(with: url)
         downloadTask.resume()
+    }
+    
+    // URLSessionDownloadDelegate required methods
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("Finished downloading file.")
+    }
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        print(totalBytesWritten, totalBytesExpectedToWrite)
     }
 
     override func didReceiveMemoryWarning() {
