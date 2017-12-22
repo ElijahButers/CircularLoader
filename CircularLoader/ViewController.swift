@@ -75,7 +75,13 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-        print(totalBytesWritten, totalBytesExpectedToWrite)
+        
+        let percentage = CGFloat(totalBytesWritten / totalBytesExpectedToWrite)
+        
+        DispatchQueue.main.async {
+            self.shapeLayer.strokeEnd = percentage
+        }
+        print(percentage)
     }
 
     override func didReceiveMemoryWarning() {
