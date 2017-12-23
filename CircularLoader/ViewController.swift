@@ -17,8 +17,8 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let center = view.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: CGFloat(-CFloat.pi / 2), endAngle: 2 * CGFloat.pi, clockwise: true)
+        // let center = view.center
+        let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
@@ -26,6 +26,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = kCALineCapRound
+        trackLayer.position = view.center
         view.layer.addSublayer(trackLayer)
         
         shapeLayer.path = circularPath.cgPath
@@ -34,6 +35,8 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = kCALineCapRound
         shapeLayer.strokeEnd = 0
+        shapeLayer.position = view.center
+        shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         view.layer.addSublayer(shapeLayer)
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
@@ -52,13 +55,14 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     @objc private func handleTap() {
         print("Attempting to animate stroke")
         
-        animateCircle()
+        // animateCircle()
         beginDownloadingFile()
     }
     
     private func beginDownloadingFile() {
         print("Attempting to dowload file")
         
+        shapeLayer.strokeEnd = 0
         let configuration = URLSessionConfiguration.default
         let operationQueue = OperationQueue()
         let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
