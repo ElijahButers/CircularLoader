@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, URLSessionDownloadDelegate {
     
     let shapeLayer = CAShapeLayer()
-    let urlString = "https://www.youtube.com/watch?v=lYVazkkjOb8&t=351s"
+    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
 
     override func viewDidLoad() {
         super.viewDidLoad()
