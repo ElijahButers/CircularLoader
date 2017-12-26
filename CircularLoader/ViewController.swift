@@ -94,6 +94,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         let percentage = CGFloat(totalBytesWritten / totalBytesExpectedToWrite)
         
         DispatchQueue.main.async {
+            self.percentageLabel.text = "\(Int(percentage * 100))%"
             self.shapeLayer.strokeEnd = percentage
         }
         print(percentage)
