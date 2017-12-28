@@ -48,6 +48,14 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         view.layer.addSublayer(shapeLayer)
         
+        pulsatingLayer.path = circularPath.cgPath
+        pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
+        pulsatingLayer.lineWidth = 10
+        pulsatingLayer.fillColor = UIColor.clear.cgColor
+        pulsatingLayer.lineCap = kCALineCapRound
+        pulsatingLayer.position = view.center
+        view.layer.addSublayer(pulsatingLayer)
+        
         percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         percentageLabel.center = view.center
         view.addSubview(percentageLabel)
