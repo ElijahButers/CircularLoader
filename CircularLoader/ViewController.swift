@@ -60,6 +60,8 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         percentageLabel.center = view.center
         view.addSubview(percentageLabel)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        animatePulsatingLayer()
     }
     
     fileprivate func animateCircle() {
@@ -90,6 +92,10 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         guard let url = URL(string: urlString) else { return }
         let downloadTask = urlSession.downloadTask(with: url)
         downloadTask.resume()
+    }
+    
+    private func animatePulsatingLayer() {
+        
     }
     
     // URLSessionDownloadDelegate required methods
