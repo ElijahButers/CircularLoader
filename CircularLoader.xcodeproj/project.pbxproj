@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E270F00A1FE44C1A002C76F6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E270F0091FE44C1A002C76F6 /* Default-568h@2x.png */; };
+		E278262C1FFFBFA0009116AC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E278262B1FFFBFA0009116AC /* Extensions.swift */; };
 		E2D7970A1FE4453C00E9B062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D797091FE4453C00E9B062 /* AppDelegate.swift */; };
 		E2D7970C1FE4453C00E9B062 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D7970B1FE4453C00E9B062 /* ViewController.swift */; };
 		E2D7970F1FE4453C00E9B062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D7970D1FE4453C00E9B062 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		E270F0091FE44C1A002C76F6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E278262B1FFFBFA0009116AC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E2D797061FE4453C00E9B062 /* CirculaeLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CirculaeLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D797091FE4453C00E9B062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D7970B1FE4453C00E9B062 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			children = (
 				E2D797091FE4453C00E9B062 /* AppDelegate.swift */,
 				E2D7970B1FE4453C00E9B062 /* ViewController.swift */,
+				E278262B1FFFBFA0009116AC /* Extensions.swift */,
 				E2D7970D1FE4453C00E9B062 /* Main.storyboard */,
 				E2D797101FE4453C00E9B062 /* Assets.xcassets */,
 				E2D797121FE4453C00E9B062 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2D7970C1FE4453C00E9B062 /* ViewController.swift in Sources */,
+				E278262C1FFFBFA0009116AC /* Extensions.swift in Sources */,
 				E2D7970A1FE4453C00E9B062 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
