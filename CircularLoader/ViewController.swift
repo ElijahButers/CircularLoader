@@ -26,7 +26,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // let center = view.center
+        view.backgroundColor = UIColor.backgroundColor
         let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         let trackLayer = CAShapeLayer()
