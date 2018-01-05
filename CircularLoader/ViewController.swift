@@ -48,10 +48,11 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         view.layer.addSublayer(shapeLayer)
         
+        pulsatingLayer = CAShapeLayer()
         pulsatingLayer.path = circularPath.cgPath
         pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
         pulsatingLayer.lineWidth = 10
-        pulsatingLayer.fillColor = UIColor.clear.cgColor
+        pulsatingLayer.fillColor = UIColor.yellow.cgColor
         pulsatingLayer.lineCap = kCALineCapRound
         pulsatingLayer.position = view.center
         view.layer.addSublayer(pulsatingLayer)
