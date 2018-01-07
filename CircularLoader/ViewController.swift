@@ -29,6 +29,15 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         view.backgroundColor = UIColor.backgroundColor
         let circularPath = UIBezierPath(arcCenter: .zero, radius: 100, startAngle: 0, endAngle: 2 * CGFloat.pi, clockwise: true)
         
+        pulsatingLayer = CAShapeLayer()
+        pulsatingLayer.path = circularPath.cgPath
+        pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
+        pulsatingLayer.lineWidth = 10
+        pulsatingLayer.fillColor = UIColor.yellow.cgColor
+        pulsatingLayer.lineCap = kCALineCapRound
+        pulsatingLayer.position = view.center
+        view.layer.addSublayer(pulsatingLayer)
+        
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
@@ -47,15 +56,6 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         shapeLayer.position = view.center
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         view.layer.addSublayer(shapeLayer)
-        
-        pulsatingLayer = CAShapeLayer()
-        pulsatingLayer.path = circularPath.cgPath
-        pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
-        pulsatingLayer.lineWidth = 10
-        pulsatingLayer.fillColor = UIColor.yellow.cgColor
-        pulsatingLayer.lineCap = kCALineCapRound
-        pulsatingLayer.position = view.center
-        view.layer.addSublayer(pulsatingLayer)
         
         percentageLabel.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         percentageLabel.center = view.center
