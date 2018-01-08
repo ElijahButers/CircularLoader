@@ -68,6 +68,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         animatePulsatingLayer()
+        setupNotificationObservers()
     }
     
     fileprivate func animateCircle() {
@@ -113,6 +114,10 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         
     }
     
+    private func setupNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(), name: .UIApplicationWillEnterForeground, object: nil)
+    }
+    
     // URLSessionDownloadDelegate required methods
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
@@ -129,6 +134,8 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         }
         print(percentage)
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
