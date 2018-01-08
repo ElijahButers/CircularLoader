@@ -19,6 +19,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         label.text = "Start"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.textColor = .white
         return label
     }()
 
