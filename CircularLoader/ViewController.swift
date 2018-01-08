@@ -115,7 +115,11 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     }
     
     private func setupNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(), name: .UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
+    }
+    
+    @objc private func handleEnterForeground() {
+        animatePulsatingLayer()
     }
     
     // URLSessionDownloadDelegate required methods
