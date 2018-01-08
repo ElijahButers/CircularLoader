@@ -22,6 +22,10 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         label.textColor = .white
         return label
     }()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
