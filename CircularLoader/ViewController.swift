@@ -31,24 +31,24 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         
         pulsatingLayer = CAShapeLayer()
         pulsatingLayer.path = circularPath.cgPath
-        pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
+        pulsatingLayer.strokeColor = UIColor.clear.cgColor
         pulsatingLayer.lineWidth = 20
-        pulsatingLayer.fillColor = UIColor.yellow.cgColor
+        pulsatingLayer.fillColor = UIColor.pulsatingFillColor.cgColor
         pulsatingLayer.lineCap = kCALineCapRound
         pulsatingLayer.position = view.center
         view.layer.addSublayer(pulsatingLayer)
         
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
+        trackLayer.strokeColor = UIColor.trackStrokeColor.cgColor
         trackLayer.lineWidth = 20
-        trackLayer.fillColor = UIColor.clear.cgColor
+        trackLayer.fillColor = UIColor.backgroundColor.cgColor
         trackLayer.lineCap = kCALineCapRound
         trackLayer.position = view.center
         view.layer.addSublayer(trackLayer)
         
         shapeLayer.path = circularPath.cgPath
-        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.strokeColor = UIColor.outlineStrokeColor.cgColor
         shapeLayer.lineWidth = 20
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = kCALineCapRound
