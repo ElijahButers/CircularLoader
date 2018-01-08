@@ -32,7 +32,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         pulsatingLayer = CAShapeLayer()
         pulsatingLayer.path = circularPath.cgPath
         pulsatingLayer.strokeColor = UIColor.lightGray.cgColor
-        pulsatingLayer.lineWidth = 10
+        pulsatingLayer.lineWidth = 20
         pulsatingLayer.fillColor = UIColor.yellow.cgColor
         pulsatingLayer.lineCap = kCALineCapRound
         pulsatingLayer.position = view.center
@@ -41,7 +41,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 10
+        trackLayer.lineWidth = 20
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = kCALineCapRound
         trackLayer.position = view.center
@@ -49,7 +49,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = 10
+        shapeLayer.lineWidth = 20
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = kCALineCapRound
         shapeLayer.strokeEnd = 0
