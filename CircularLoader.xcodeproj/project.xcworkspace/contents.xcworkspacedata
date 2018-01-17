@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CirculaeLoader.xcodeproj">
+      location = "self:/Swift/SwiftDemoApps/CircularLoader/CircularLoader.xcodeproj">
    </FileRef>
 </Workspace>
